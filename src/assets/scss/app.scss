@@ -10,21 +10,81 @@
   color: $text-light;
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 @import "colors";
 
 .nav {
-  border: solid red;
+  //border: solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
 
   .menu {
     display: flex;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 24px;
+    position: relative;
+    border-radius: 99px;
     background-color: $menu-gray;
     font-weight: 700;
+    padding: 0.3rem;
+  }
+
+  .menu * {
+    z-index: 2;
+  }
+
+  .opt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 200px;
+    font-size: 1.25rem;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+  }
+
+  .glider {
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width: 200px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+  }
+
+  input[type="radio"] {
+    display: none;
+    //color: white;
+  }
+
+  input[type="radio"]:checked + label {
+    color: $text-light;
+  }
+
+  input[id="radio-1"]:checked ~ .glider {
+    transform: translateX(0);
+  }
+
+  input[id="radio-2"]:checked ~ .glider {
+    transform: translateX(100%);
+  }
+
+  input[id="radio-3"]:checked ~ .glider {
+    transform: translateX(200%);
+  }
+
+  @media (max-width: 700px) {
+    .menu {
+      transform: scale(0.6);
+    }
   }
 }
