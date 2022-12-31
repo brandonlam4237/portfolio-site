@@ -11,7 +11,7 @@
     border-radius: 99px;
     background-color: $menu-gray;
     font-weight: 700;
-    padding: 0.3rem;
+    padding: 0.2rem;
   }
 
   .options * {
@@ -62,21 +62,25 @@
     transform: translateX(200%);
   }
 
+  input[id="opt-4"]:checked ~ .glider {
+    transform: translateX(300%);
+  }
+
   @media (min-width: 300px) {
     .options {
-      transform: scale(0.7);
+      transform: scale(0.5);
     }
   }
 
   @media (min-width: 900px) {
     .options {
-      transform: scale(0.8);
+      transform: scale(0.6);
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1150px) {
     .options {
-      transform: scale(0.9);
+      transform: scale(0.8);
     }
   }
 
@@ -96,10 +100,67 @@
   .title {
     font-weight: 700;
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
+    margin-bottom: -10px;
 
-    @media (min-width: 1300px) {
+    @media (min-width: 1150px) {
+      font-size: 1.1rem;
+      margin-bottom: -5px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: clamp(1.1rem, 0.4rem + 0.8vw, 1.4rem);
       padding: clamp(0.625rem, -0.5357rem + 1.4286vw, 1.25rem);
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    @media (min-width: 900px) {
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 1150px) {
+      margin-top: clamp(1.875rem, -2.5rem + 5vw, 3.75rem);
+    }
+  }
+
+  .skill-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 8vw;
+    gap: 20px;
+    width: 20vw;
+  }
+
+  .skill-badge {
+    font-size: clamp(0.8rem, 0.3333rem + 0.5333vw, 1rem);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .icon {
+    height: 3rem;
+    background-color: $light-background;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 4px;
+    border-radius: 12px;
+
+    @media (min-width: 900px) {
+      height: 3.5rem;
+    }
+
+    @media (min-width: 1150px) {
+      height: clamp(4rem, 0.5rem + 4vw, 5.5rem);
     }
   }
 }
