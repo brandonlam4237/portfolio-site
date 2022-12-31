@@ -1,5 +1,6 @@
 import "./assets/scss/app.scss";
 import { useState } from "react";
+import Home from "./pages/Home";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -45,7 +46,7 @@ function App() {
         </div>
       </div>
       <div className="pages">
-        {page === "home" && <div>Home</div>}
+        {page === "home" && <Home />}
         {page === "projects" && <div>Projects</div>}
         {page === "contact" && <div>Contact</div>}
       </div>
