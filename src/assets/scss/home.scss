@@ -10,6 +10,95 @@
   .about-me {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8b3b6;
+
+    button {
+      z-index: 2;
+      //background-color: white;
+      background-color: #f8b3b6;
+      cursor: pointer;
+      border-radius: 24px;
+      font-weight: 700;
+      padding: 8px;
+      width: clamp(8rem, -1.3333rem + 10.6667vw, 12rem);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+      .contact-btn {
+        font-size: clamp(1rem, 0.0667rem + 1.0667vw, 1.4rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.5rem, -0.6667rem + 1.3333vw, 1rem);
+        letter-spacing: 1px;
+
+        img {
+          height: clamp(0.6rem, 0.1333rem + 0.5333vw, 0.8rem);
+        }
+      }
+    }
+
+    img {
+      height: 6rem;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: clamp(0.9rem, 0.2rem + 0.8vw, 1.2rem);
+
+      @media (max-width: 800px) {
+        justify-content: center;
+        font-size: 0.8rem;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.625rem, -0.8333rem + 1.6667vw, 1.25rem);
+        margin-left: clamp(2rem, -1.5rem + 4vw, 3.5rem);
+
+        @media (max-width: 800px) {
+          margin-left: 0rem;
+          align-items: center;
+        }
+      }
+
+      .text {
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 2;
+        font-weight: 600;
+        gap: clamp(0.375rem, -0.5rem + 1vw, 0.75rem);
+
+        @media (max-width: 800px) {
+          align-items: center;
+        }
+
+        img {
+          height: 1rem;
+        }
+      }
+
+      .screen {
+        z-index: 1;
+        position: absolute;
+        //background-color: rgb(0, 0, 0);
+        //opacity: 5%;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border-radius: 24px;
+      }
+    }
   }
 
   .github {
@@ -52,7 +141,12 @@
 
 @media (max-width: 800px) {
   .home {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  .home > div,
+  .home > a {
+    height: 150px;
   }
 }
 
@@ -63,4 +157,13 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#arrow {
+  z-index: 2;
+  position: absolute;
+  height: clamp(4rem, 1.6667rem + 2.6667vw, 5rem);
+  right: 0;
+  bottom: 0;
+  padding: 10px;
 }

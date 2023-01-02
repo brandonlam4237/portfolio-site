@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
   const [page, setPage] = useState("home");
+
   return (
     <div className="App">
       <div className="nav">
@@ -46,7 +47,15 @@ function App() {
         </div>
       </div>
       <div className="pages">
-        {page === "home" && <Home />}
+        {page === "home" && (
+          <Home
+            toContact={() => {
+              setPage("contact");
+              document.getElementById("radio-3").checked = true;
+              document.getElementById("radio-1").checked = false;
+            }}
+          />
+        )}
         {page === "projects" && <div>Projects</div>}
         {page === "contact" && <div>Contact</div>}
       </div>

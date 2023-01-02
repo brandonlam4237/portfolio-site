@@ -17,15 +17,13 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  background-color: $light-background;
 }
 
 .App {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-color: $light-background;
 }
 
 .nav {
@@ -117,9 +115,12 @@ body {
 }
 
 .pages {
-  //border: solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10vh;
+
+  @media (max-width: 800px) {
+    margin-top: 0vh;
+  }
 }
