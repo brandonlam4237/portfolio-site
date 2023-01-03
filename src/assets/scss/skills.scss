@@ -66,31 +66,27 @@
     transform: translateX(300%);
   }
 
-  @media (min-width: 300px) {
-    .options {
+  .options {
+    @media (min-width: 300px) {
       transform: scale(0.5);
     }
-  }
 
-  @media (min-width: 900px) {
-    .options {
+    @media (min-width: 900px) {
       transform: scale(0.6);
     }
-  }
 
-  @media (min-width: 1150px) {
-    .options {
+    @media (min-width: 1150px) {
+      transform: scale(0.75);
+    }
+
+    @media (min-width: 1250px) {
       transform: scale(0.8);
     }
-  }
 
-  @media (min-width: 1500px) {
-    .options {
+    @media (min-width: 1450px) {
       transform: scale(1);
     }
-  }
-  @media (min-width: 1800px) {
-    .options {
+    @media (min-width: 1800px) {
       transform: scale(1.2);
     }
   }
