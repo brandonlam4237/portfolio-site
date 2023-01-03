@@ -27,8 +27,11 @@ function Contact() {
 
   return (
     <div className="contact">
-      <div
+      <motion.div
         className="email"
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0 }}
         onMouseEnter={() => {
           setMailHover(true);
         }}
@@ -62,9 +65,12 @@ function Contact() {
           </div>
         )}
         {!mailHover && <img src={mail} alt="mail-icon" />}
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="phone"
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.15 }}
         onMouseEnter={() => {
           setPhoneHover(true);
         }}
@@ -98,9 +104,14 @@ function Contact() {
           </div>
         )}
         {!phoneHover && <img src={phone} alt="phone-icon" />}
-      </div>
-      <div className="contact-form"></div>
-      <a
+      </motion.div>
+      <motion.div
+        className="contact-form"
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.25 }}
+      ></motion.div>
+      <motion.a
         className="linkedin"
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
@@ -126,9 +137,12 @@ function Contact() {
           />
         )}
         <img src={linkedin} alt="linkedin-icon" />
-      </a>
-      <div
+      </motion.a>
+      <motion.div
         className="location"
+        initial={{ y: "80vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.55 }}
         onMouseEnter={() => {
           setLocationHover(true);
         }}
@@ -155,7 +169,7 @@ function Contact() {
           </div>
         )}
         {!locationHover && <img src={location} alt="location-icon" />}
-      </div>
+      </motion.div>
     </div>
   );
 }
