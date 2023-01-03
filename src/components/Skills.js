@@ -27,7 +27,13 @@ function Skills() {
   const [option, setOption] = useState("front-end");
 
   return (
-    <div className="skills" id="skills">
+    <motion.div
+      className="skills"
+      id="skills"
+      initial={{ y: "100vh" }}
+      animate={{ y: 0 }}
+      transition={{ type: "tween", duration: 1.2, delay: 0.25 }}
+    >
       <div className="title">Skills</div>
       <div className="mini-nav">
         <div className="options">
@@ -243,7 +249,7 @@ function Skills() {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

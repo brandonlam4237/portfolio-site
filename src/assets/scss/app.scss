@@ -32,10 +32,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
 
-  @media (min-width: 1300px) {
-    padding: clamp(0.625rem, -2.8571rem + 4.2857vw, 2.5rem);
+  @media (min-width: 1400px) {
+    padding: clamp(1rem, -2.5rem + 4vw, 2.5rem);
   }
 
   .menu {
@@ -44,7 +44,11 @@ body {
     border-radius: 99px;
     background-color: $menu-gray;
     font-weight: 700;
-    padding: 0.3rem;
+    padding: 0.2rem;
+
+    @media (min-width: 1400px) {
+      padding: clamp(0.2rem, -0.0333rem + 0.2667vw, 0.3rem);
+    }
   }
 
   .menu * {
@@ -55,23 +59,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 54px;
-    width: 200px;
-    font-size: 1.25rem;
+    height: 2.5rem;
+    width: 10rem;
+    font-size: 1rem;
     border-radius: 99px;
     cursor: pointer;
     transition: color 0.15s ease-in;
+
+    @media (max-width: 800px) {
+      width: 25vw;
+      font-size: 1rem;
+      height: 3rem;
+    }
+
+    @media (min-width: 1400px) {
+      width: clamp(10rem, 3rem + 8vw, 13rem);
+      height: clamp(2.5rem, 0.1667rem + 2.6667vw, 3.5rem);
+      font-size: clamp(1rem, 0.4167rem + 0.6667vw, 1.25rem);
+    }
   }
 
   .glider {
     position: absolute;
     display: flex;
-    height: 54px;
-    width: 200px;
+    height: 2.5rem;
+    width: 10rem;
     background-color: white;
     z-index: 1;
     border-radius: 99px;
-    transition: 0.25s ease-out;
+    transition: 0.35s ease-out;
+
+    @media (max-width: 800px) {
+      width: 25vw;
+      height: 3rem;
+    }
+
+    @media (min-width: 1400px) {
+      width: clamp(10rem, 3rem + 8vw, 13rem);
+      height: clamp(2.5rem, 0.1667rem + 2.6667vw, 3.5rem);
+    }
   }
 
   input[type="radio"] {
@@ -93,24 +119,6 @@ body {
 
   input[id="radio-3"]:checked ~ .glider {
     transform: translateX(200%);
-  }
-
-  @media (min-width: 300px) {
-    .menu {
-      transform: scale(0.6);
-    }
-  }
-
-  @media (min-width: 600px) {
-    .menu {
-      transform: scale(0.8);
-    }
-  }
-
-  @media (min-width: 1500px) {
-    .menu {
-      transform: scale(1);
-    }
   }
 }
 
