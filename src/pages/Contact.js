@@ -38,7 +38,27 @@ function Contact() {
       >
         {mailHover && (
           <div className="mail-hover">
-            <div>brandon</div> <div>lam4237</div> <div>@gmail.com</div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35 }}
+            >
+              brandon
+            </motion.div>{" "}
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35, delay: 0.4 }}
+            >
+              lam4237
+            </motion.div>{" "}
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35, delay: 0.8 }}
+            >
+              @gmail.com
+            </motion.div>
           </div>
         )}
         {!mailHover && <img src={mail} alt="mail-icon" />}
@@ -54,9 +74,27 @@ function Contact() {
       >
         {phoneHover && (
           <div className="phone-hover">
-            <div>917</div>
-            <div>727</div>
-            <div>353</div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35 }}
+            >
+              917
+            </motion.div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35, delay: 0.4 }}
+            >
+              727
+            </motion.div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35, delay: 0.8 }}
+            >
+              353
+            </motion.div>
           </div>
         )}
         {!phoneHover && <img src={phone} alt="phone-icon" />}
@@ -100,7 +138,20 @@ function Contact() {
       >
         {locationHover && (
           <div className="location-hover">
-            <div>Queens</div> <div>NYC</div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35 }}
+            >
+              Queens
+            </motion.div>
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.35, delay: 0.4 }}
+            >
+              NYC
+            </motion.div>
           </div>
         )}
         {!locationHover && <img src={location} alt="location-icon" />}

@@ -17,6 +17,9 @@
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     img {
       height: 4rem;
+      @media (min-width: 801px) {
+        height: clamp(3.5rem, 2.1639rem + 2.6689vw, 5.5rem);
+      }
     }
 
     .mail-hover {
@@ -39,6 +42,9 @@
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     img {
       height: 4rem;
+      @media (min-width: 801px) {
+        height: clamp(3.5rem, 2.1639rem + 2.6689vw, 5.5rem);
+      }
     }
 
     .phone-hover {
@@ -66,6 +72,9 @@
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     img {
       height: 6rem;
+      @media (min-width: 801px) {
+        height: clamp(4.5rem, 2.1618rem + 4.6706vw, 8rem);
+      }
     }
   }
   .location {
@@ -78,6 +87,9 @@
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     img {
       height: 4rem;
+      @media (min-width: 801px) {
+        height: clamp(3.5rem, 2.1639rem + 2.6689vw, 5.5rem);
+      }
     }
     .location-hover {
       height: 100%;
@@ -96,9 +108,27 @@
     color: white;
     font-weight: 700;
     font-size: 1.5rem;
+
+    @media (min-width: 800px) {
+      font-size: clamp(1.1rem, 0.3651rem + 1.4679vw, 2.2rem);
+    }
   }
 
   .mail-hover > div {
     font-size: 1.2rem;
+    @media (min-width: 800px) {
+      font-size: clamp(0.8rem, 0.3324rem + 0.9341vw, 1.5rem);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact > div,
+  .contact > a {
+    height: 150px;
   }
 }

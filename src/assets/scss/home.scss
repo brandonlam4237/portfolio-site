@@ -56,6 +56,9 @@
 
     img {
       height: 6rem;
+      @media (min-width: 801px) {
+        height: clamp(4rem, 0.6597rem + 6.6722vw, 9rem);
+      }
     }
 
     .overlay {
@@ -129,6 +132,9 @@
     align-items: center;
     img {
       height: 4rem;
+      @media (min-width: 801px) {
+        height: clamp(3.2rem, 0.6614rem + 5.0709vw, 7rem);
+      }
     }
   }
 
@@ -144,6 +150,9 @@
     align-items: center;
     img {
       height: 6rem;
+      @media (min-width: 801px) {
+        height: clamp(4.5rem, 2.1618rem + 4.6706vw, 8rem);
+      }
     }
   }
 
@@ -159,6 +168,9 @@
 
     img {
       height: 4.5rem;
+      @media (min-width: 801px) {
+        height: clamp(4rem, 1.9958rem + 4.0033vw, 7rem);
+      }
     }
   }
 }
