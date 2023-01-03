@@ -131,7 +131,7 @@ function Skills() {
                 src={node}
                 alt="nodeJS"
               />
-              <div>nodeJS</div>
+              <div>Node.js</div>
             </div>
             <div className="skill-badge">
               <motion.img
@@ -158,7 +158,7 @@ function Skills() {
                 src={mongo}
                 alt="mongo"
               />
-              <div>mongoDB</div>
+              <div>MongoDB</div>
             </div>
           </div>
         )}

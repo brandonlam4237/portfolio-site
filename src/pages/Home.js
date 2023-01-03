@@ -28,36 +28,9 @@ function Home({ toContact }) {
     },
   };
 
-  const moduleAnimation = {
-    init: {
-      y: "100vh",
-    },
-    end: {
-      y: 0,
-      transition: {
-        type: "tween",
-        duration: 1.2,
-      },
-    },
-  };
-
-  const parentAnimation = {
-    init: {
-      y: 0,
-    },
-    end: {
-      y: 0,
-      transition: {
-        when: "beforeChildren",
-        type: "spring",
-        staggerChildren: 5,
-      },
-    },
-  };
   return (
     <div className="home">
       <motion.div
-        variants={moduleAnimation}
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0 }}
@@ -73,18 +46,65 @@ function Home({ toContact }) {
           <div className="overlay">
             <div className="content">
               <div className="text">
-                <div>Hello! My name is Brandon. </div>
-                <div>I'm a full-stack web developer </div>
-                <div>with a passion for creating aesthetic</div>
-                <div>and performative applications. </div>
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  Hello! My name is Brandon Lam.
+                </motion.div>
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.35, delay: 0.4 }}
+                >
+                  I'm a full-stack web developer
+                </motion.div>
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.35, delay: 0.8 }}
+                >
+                  with a passion for creating aesthetic
+                </motion.div>
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.35, delay: 1.2 }}
+                >
+                  and performative applications.
+                </motion.div>
               </div>
-              <button onClick={toContact}>
-                <div className="contact-btn">
-                  <img src={blush} alt="blush" />
-                  <div>Contact</div>
-                  <img src={blush} alt="blush" />
-                </div>
-              </button>
+              <motion.button
+                onClick={toContact}
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.35, delay: 1.6 }}
+              >
+                <motion.div className="contact-btn">
+                  <motion.img
+                    src={blush}
+                    alt="blush"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 2.4 }}
+                  />
+                  <motion.div
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.35, delay: 2 }}
+                  >
+                    Contact
+                  </motion.div>
+                  <motion.img
+                    src={blush}
+                    alt="blush"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 2.4 }}
+                  />
+                </motion.div>
+              </motion.button>
             </div>
 
             <span className="screen" />
