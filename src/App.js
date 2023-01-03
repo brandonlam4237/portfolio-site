@@ -17,7 +17,7 @@ function App() {
             onChange={(e) => setPage(e.target.value)}
             defaultChecked
           />
-          <label class="opt" for="radio-1">
+          <label className="opt" htmlFor="radio-1">
             Home
           </label>
 
@@ -28,7 +28,7 @@ function App() {
             value="projects"
             onChange={(e) => setPage(e.target.value)}
           />
-          <label class="opt" for="radio-2">
+          <label className="opt" htmlFor="radio-2">
             Projects
           </label>
 
@@ -39,7 +39,7 @@ function App() {
             value="contact"
             onChange={(e) => setPage(e.target.value)}
           />
-          <label class="opt" for="radio-3">
+          <label className="opt" htmlFor="radio-3">
             Contact
           </label>
 

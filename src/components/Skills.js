@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "../assets/scss/skills.scss";
 
 // icons
@@ -38,7 +39,7 @@ function Skills() {
             onChange={(e) => setOption(e.target.value)}
             defaultChecked
           />
-          <label class="opt" for="opt-1">
+          <label className="opt" htmlFor="opt-1">
             Front End
           </label>
 
@@ -49,7 +50,7 @@ function Skills() {
             value="back-end"
             onChange={(e) => setOption(e.target.value)}
           />
-          <label class="opt" for="opt-2">
+          <label className="opt" htmlFor="opt-2">
             Back End
           </label>
 
@@ -60,7 +61,7 @@ function Skills() {
             value="languages"
             onChange={(e) => setOption(e.target.value)}
           />
-          <label class="opt" for="opt-3">
+          <label className="opt" htmlFor="opt-3">
             Languages
           </label>
 
@@ -71,7 +72,7 @@ function Skills() {
             value="other"
             onChange={(e) => setOption(e.target.value)}
           />
-          <label class="opt" for="opt-4">
+          <label className="opt" htmlFor="opt-4">
             Other
           </label>
 
@@ -82,21 +83,41 @@ function Skills() {
         {option === "front-end" && (
           <div className="skill-page">
             <div className="skill-badge">
-              <img className="icon" src={html} alt="html" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={html}
+                alt="html"
+              />
               <div>HTML</div>
             </div>
 
             <div className="skill-badge">
-              <img className="icon" src={css} alt="css" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={css}
+                alt="css"
+              />
               <div>CSS</div>
             </div>
 
             <div className="skill-badge">
-              <img className="icon" src={react} alt="react" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={react}
+                alt="react"
+              />
               <div>React</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={sass} alt="sass" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={sass}
+                alt="sass"
+              />
               <div>Sass</div>
             </div>
           </div>
@@ -104,19 +125,39 @@ function Skills() {
         {option === "back-end" && (
           <div className="skill-page">
             <div className="skill-badge">
-              <img className="icon" src={node} alt="nodeJS" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={node}
+                alt="nodeJS"
+              />
               <div>nodeJS</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={express} alt="express" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={express}
+                alt="express"
+              />
               <div>express</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={sql} alt="sql" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={sql}
+                alt="sql"
+              />
               <div>SQL</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={mongo} alt="mongo" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={mongo}
+                alt="mongo"
+              />
               <div>mongoDB</div>
             </div>
           </div>
@@ -124,19 +165,39 @@ function Skills() {
         {option === "languages" && (
           <div className="skill-page">
             <div className="skill-badge">
-              <img className="icon" src={js} alt="javascript" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={js}
+                alt="javascript"
+              />
               <div>Javascript</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={python} alt="python" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={python}
+                alt="python"
+              />
               <div>Python</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={java} alt="java" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={java}
+                alt="java"
+              />
               <div>Java</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={c} alt="c++" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={c}
+                alt="c++"
+              />
               <div>C++</div>
             </div>
           </div>
@@ -144,19 +205,39 @@ function Skills() {
         {option === "other" && (
           <div className="skill-page">
             <div className="skill-badge">
-              <img className="icon" src={git} alt="git" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={git}
+                alt="git"
+              />
               <div>git</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={ps} alt="photoshop" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={ps}
+                alt="photoshop"
+              />
               <div>Photoshop</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={ae} alt="after effects" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={ae}
+                alt="after effects"
+              />
               <div>After Effects</div>
             </div>
             <div className="skill-badge">
-              <img className="icon" src={ai} alt="illustrator" />
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={ai}
+                alt="illustrator"
+              />
               <div>Illustrator</div>
             </div>
           </div>

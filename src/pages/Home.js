@@ -10,15 +10,57 @@ import arrow from "../assets/icons/arrow.png";
 //import stars from "../assets/icons/stars.png";
 import blush from "../assets/icons/blush.png";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Home({ toContact }) {
   const [aboutHover, setAboutHover] = useState(false);
   const [linkedinHover, setLinkedinHover] = useState(false);
   const [gitHover, setGitHover] = useState(false);
   const [resumeHover, setResumeHover] = useState(false);
+  const arrowPopup = {
+    init: {
+      y: 10,
+      opacity: 0.4,
+    },
+    end: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const moduleAnimation = {
+    init: {
+      y: "100vh",
+    },
+    end: {
+      y: 0,
+      transition: {
+        type: "tween",
+        duration: 1.2,
+      },
+    },
+  };
+
+  const parentAnimation = {
+    init: {
+      y: 0,
+    },
+    end: {
+      y: 0,
+      transition: {
+        when: "beforeChildren",
+        type: "spring",
+        staggerChildren: 5,
+      },
+    },
+  };
   return (
     <div className="home">
-      <div
+      <motion.div
+        variants={moduleAnimation}
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0 }}
         className="about-me"
         onMouseEnter={() => {
           setAboutHover(true);
@@ -49,12 +91,15 @@ function Home({ toContact }) {
           </div>
         )}
         {!aboutHover && <img src={kirby} alt="personal-icon" />}
-      </div>
-      <a
+      </motion.div>
+      <motion.a
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.15 }}
+        className="github"
         href="https://github.com/brandonlam4237"
         target="_blank"
         rel="noreferrer"
-        className="github"
         onMouseEnter={() => {
           setGitHover(true);
         }}
@@ -62,15 +107,27 @@ function Home({ toContact }) {
           setGitHover(false);
         }}
       >
-        {gitHover && <img id="arrow" src={arrow} alt="arrow" />}
+        {gitHover && (
+          <motion.img
+            variants={arrowPopup}
+            initial="init"
+            animate="end"
+            id="arrow"
+            src={arrow}
+            alt="arrow"
+          />
+        )}
         <img src={github} alt="github icon" />
-      </a>
+      </motion.a>
       <Skills />
-      <a
+      <motion.a
+        className="linkedin"
+        initial={{ y: "80vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.4 }}
         href="https://www.linkedin.com/in/brandon-lam-b30819165/"
         target="_blank"
         rel="noreferrer"
-        className="linkedin"
         onMouseEnter={() => {
           setLinkedinHover(true);
         }}
@@ -78,14 +135,26 @@ function Home({ toContact }) {
           setLinkedinHover(false);
         }}
       >
-        {linkedinHover && <img id="arrow" src={arrow} alt="arrow" />}
+        {linkedinHover && (
+          <motion.img
+            id="arrow"
+            variants={arrowPopup}
+            initial="init"
+            animate="end"
+            src={arrow}
+            alt="arrow"
+          />
+        )}
         <img src={linkedin} alt="linkedin icon" />
-      </a>
-      <a
+      </motion.a>
+      <motion.a
+        initial={{ y: "80vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.55 }}
+        className="resume"
         href={pdf}
         target="_blank"
         rel="noreferrer"
-        className="resume"
         onMouseEnter={() => {
           setResumeHover(true);
         }}
@@ -93,9 +162,18 @@ function Home({ toContact }) {
           setResumeHover(false);
         }}
       >
-        {resumeHover && <img id="arrow" src={arrow} alt="arrow" />}
+        {resumeHover && (
+          <motion.img
+            id="arrow"
+            variants={arrowPopup}
+            initial="init"
+            animate="end"
+            src={arrow}
+            alt="arrow"
+          />
+        )}
         <img src={resume} alt="resume icon" />
-      </a>
+      </motion.a>
     </div>
   );
 }
