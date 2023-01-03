@@ -18,6 +18,16 @@
     img {
       height: 4rem;
     }
+
+    .mail-hover {
+      height: 100%;
+      width: 100%;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .phone {
     background-color: #2fd44b;
@@ -29,6 +39,16 @@
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     img {
       height: 4rem;
+    }
+
+    .phone-hover {
+      height: 100%;
+      width: 100%;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
   .contact-form {
@@ -59,5 +79,26 @@
     img {
       height: 4rem;
     }
+    .location-hover {
+      height: 100%;
+      width: 100%;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .location-hover > div,
+  .mail-hover > div,
+  .phone-hover > div {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .mail-hover > div {
+    font-size: 1.2rem;
   }
 }
