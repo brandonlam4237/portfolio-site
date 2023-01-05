@@ -2,6 +2,7 @@ import "./assets/scss/app.scss";
 import { useState, useRef } from "react";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 import Toast from "../src/components/Toast";
 
 function App() {
@@ -63,7 +64,7 @@ function App() {
             }}
           />
         )}
-        {page === "projects" && <div>Projects</div>}
+        {page === "projects" && <Projects />}
         {page === "contact" && <Contact toastShow={toastShow} />}
       </div>
       <Toast ref={toastRef} message="Message sent!" />

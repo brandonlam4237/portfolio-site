@@ -2,7 +2,7 @@
 
 #show {
   visibility: visible;
-  animation: fade-in-out 3.2s;
+  animation: fade-in-out 3s;
 }
 
 #hide {
@@ -64,7 +64,7 @@
     opacity: 0;
   }
 
-  25% {
+  15% {
     opacity: 1;
   }
   75% {

@@ -113,7 +113,7 @@ function Contact({ toastShow }) {
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.25 }}
       >
-        <img src={kirby} />
+        <img src={kirby} alt="kirby" />
       </motion.div>
       <motion.div
         className="contact-form"

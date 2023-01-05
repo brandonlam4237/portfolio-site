@@ -1,7 +1,6 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
 import "../assets/scss/toast.scss";
 import mail from "../assets/icons/mail-icon2.png";
-import { motion } from "framer-motion";
 
 const Toast = forwardRef((props, ref) => {
   const [showToast, setShowToast] = useState(false);
