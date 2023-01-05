@@ -1,25 +1,95 @@
 @import "colors";
 
 .emailForm {
+  width: 100%;
+  height: 100%;
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 801px) {
+      gap: clamp(0.625rem, -0.3783rem + 2.004vw, 1.25rem);
+    }
   }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 20px;
+    @media (min-width: 801px) {
+      padding-bottom: clamp(0.3125rem, -1.1924rem + 3.006vw, 1.25rem);
+      font-size: clamp(0.9rem, 0.7395rem + 0.3206vw, 1rem);
+    }
+
+    @media (min-width: 1400px) {
+      font-size: clamp(1rem, 0.0667rem + 1.0667vw, 1.4rem);
+    }
+  }
+
   input {
     background-color: $light-background;
     border-radius: 10px;
     width: 20rem;
     height: 2rem;
+    padding: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    @media (max-width: 800px) {
+      width: clamp(15rem, 7.0588rem + 33.8824vw, 24rem);
+    }
+    @media (min-width: 801px) {
+      width: clamp(12rem, -0.8417rem + 25.6513vw, 20rem);
+      height: clamp(1.6rem, 0.9579rem + 1.2826vw, 2rem);
+      font-size: clamp(0.8rem, 0.479rem + 0.6413vw, 1rem);
+    }
+    @media (min-width: 1400px) {
+      width: clamp(20rem, 10.6667rem + 10.6667vw, 24rem);
+      height: clamp(2rem, 1.0667rem + 1.0667vw, 2.4rem);
+      font-size: clamp(1rem, 0.7667rem + 0.2667vw, 1.1rem);
+    }
   }
 
   textarea {
+    padding: 8px;
+    resize: none;
     background-color: $light-background;
     border-radius: 10px;
     width: 20rem;
     height: 8rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    @media (max-width: 800px) {
+      width: clamp(15rem, 7.0588rem + 33.8824vw, 24rem);
+    }
+    @media (min-width: 801px) {
+      width: clamp(12rem, -0.8417rem + 25.6513vw, 20rem);
+      height: clamp(5rem, 0.1844rem + 9.6192vw, 8rem);
+      font-size: clamp(0.8rem, 0.479rem + 0.6413vw, 1rem);
+    }
+    @media (min-width: 1400px) {
+      width: clamp(20rem, 10.6667rem + 10.6667vw, 24rem);
+      height: clamp(8rem, -10.6667rem + 21.3333vw, 16rem);
+      font-size: clamp(1rem, 0.7667rem + 0.2667vw, 1.1rem);
+    }
+  }
+
+  .submit-btn {
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    outline: none !important;
+    background-color: $menu-gray;
   }
 }

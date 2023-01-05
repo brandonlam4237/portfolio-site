@@ -144,7 +144,7 @@ function Home({ toContact }) {
         className="linkedin"
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
-        transition={{ type: "tween", duration: 1.2, delay: 0.4 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.35 }}
         href="https://www.linkedin.com/in/brandon-lam-b30819165/"
         target="_blank"
         rel="noreferrer"
@@ -170,7 +170,7 @@ function Home({ toContact }) {
       <motion.a
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
-        transition={{ type: "tween", duration: 1.2, delay: 0.55 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.5 }}
         className="resume"
         href={pdf}
         target="_blank"

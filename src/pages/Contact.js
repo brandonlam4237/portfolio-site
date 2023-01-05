@@ -8,6 +8,7 @@ import arrow from "../assets/icons/arrow.png";
 import mail from "../assets/icons/mail-icon.png";
 import phone from "../assets/icons/phone-icon.png";
 import location from "../assets/icons/location-icon.png";
+import kirby from "../assets/icons/kirbyFloat.png";
 
 function Contact() {
   const [linkedinHover, setLinkedinHover] = useState(false);
@@ -107,10 +108,19 @@ function Contact() {
         {!phoneHover && <img src={phone} alt="phone-icon" />}
       </motion.div>
       <motion.div
-        className="contact-form"
+        className="kirby"
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.25 }}
+      >
+        <img src={kirby} />
+      </motion.div>
+      <motion.div
+        className="contact-form"
+        id="contact-form"
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.35 }}
       >
         <EmailForm />
       </motion.div>
@@ -118,7 +128,7 @@ function Contact() {
         className="linkedin"
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
-        transition={{ type: "tween", duration: 1.2, delay: 0.4 }}
+        transition={{ type: "tween", duration: 1.2, delay: 0.45 }}
         href="https://www.linkedin.com/in/brandon-lam-b30819165/"
         target="_blank"
         rel="noreferrer"
