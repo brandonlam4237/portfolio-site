@@ -1,6 +1,7 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
 import "../assets/scss/toast.scss";
-import mail from "../assets/icons/mail-icon.png";
+import mail from "../assets/icons/mail-icon2.png";
+import { motion } from "framer-motion";
 
 const Toast = forwardRef((props, ref) => {
   const [showToast, setShowToast] = useState(false);
@@ -16,7 +17,8 @@ const Toast = forwardRef((props, ref) => {
     <div id={showToast ? "show" : "hide"}>
       <div className="toast">
         <img src={mail} alt="mail" />
-        {props.message}
+        <div>{props.message}</div>
+        <span className="bg" />
       </div>
     </div>
   );

@@ -1,12 +1,10 @@
 import "../assets/scss/emailForm.scss";
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../keys";
-import Toast from "./Toast";
 
-function EmailForm() {
+function EmailForm({ toastShow }) {
   const form = useRef();
-  const toastRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,7 +12,7 @@ function EmailForm() {
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
         console.log(result.text);
-        toastRef.current.showToast();
+        toastShow();
         e.target.reset();
       },
       (error) => {
@@ -31,7 +29,6 @@ function EmailForm() {
         <textarea name="message" placeholder="Message" required />
         <input type="submit" value="Send" className="submit-btn" />
       </form>
-      <Toast ref={toastRef} message="Message sent!" />
     </div>
   );
 }

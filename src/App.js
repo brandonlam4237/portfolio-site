@@ -1,10 +1,16 @@
 import "./assets/scss/app.scss";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Toast from "../src/components/Toast";
 
 function App() {
   const [page, setPage] = useState("home");
+  const toastRef = useRef(null);
+
+  const toastShow = () => {
+    toastRef.current.showToast();
+  };
 
   return (
     <div className="App">
@@ -58,8 +64,9 @@ function App() {
           />
         )}
         {page === "projects" && <div>Projects</div>}
-        {page === "contact" && <Contact />}
+        {page === "contact" && <Contact toastShow={toastShow} />}
       </div>
+      <Toast ref={toastRef} message="Message sent!" />
     </div>
   );
 }

@@ -10,7 +10,7 @@ import phone from "../assets/icons/phone-icon.png";
 import location from "../assets/icons/location-icon.png";
 import kirby from "../assets/icons/kirbyFloat.png";
 
-function Contact() {
+function Contact({ toastShow }) {
   const [linkedinHover, setLinkedinHover] = useState(false);
   const [phoneHover, setPhoneHover] = useState(false);
   const [locationHover, setLocationHover] = useState(false);
@@ -122,7 +122,7 @@ function Contact() {
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.35 }}
       >
-        <EmailForm />
+        <EmailForm toastShow={toastShow} />
       </motion.div>
       <motion.a
         className="linkedin"
