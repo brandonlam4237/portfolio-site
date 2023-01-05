@@ -1,6 +1,7 @@
 import "../assets/scss/contact.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import EmailForm from "../components/EmailForm";
 
 import linkedin from "../assets/icons/linkedin.png";
 import arrow from "../assets/icons/arrow.png";
@@ -110,7 +111,9 @@ function Contact() {
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.25 }}
-      ></motion.div>
+      >
+        <EmailForm />
+      </motion.div>
       <motion.a
         className="linkedin"
         initial={{ y: "80vh" }}

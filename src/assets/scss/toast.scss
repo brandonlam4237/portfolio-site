@@ -1,0 +1,50 @@
+@import "colors";
+
+#show {
+  visibility: visible;
+  animation: fade-in-out 3.2s;
+}
+
+#hide {
+  visibility: hidden;
+}
+
+.toast {
+  z-index: 1000;
+  background-color: $menu-gray;
+  color: white;
+  position: fixed;
+  font-weight: bold;
+  top: 84%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    height: 25px;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    transform: translateX(500px);
+  }
+
+  20% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
