@@ -2,14 +2,88 @@
 
 .projects {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 90%;
+  gap: 5rem;
+  width: 100%;
+  overflow-x: hidden;
+  @media (max-width: 800px) {
+    gap: 3.8rem;
+  }
   .project-left {
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-bottom: 0rem;
+    }
+
     //border: solid red;
+    .description-card {
+      margin-right: -20rem;
+      margin-bottom: -5rem;
+      @media (max-width: 800px) {
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+        width: 80%;
+      }
+      .content {
+        @media (max-width: 800px) {
+          width: 100%;
+          gap: clamp(1rem, 0.2222rem + 3.5556vw, 2rem);
+        }
+      }
+    }
+  }
+  .project-right {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-bottom: 0rem;
+    }
+
+    .image-card {
+      z-index: 10;
+      margin-right: -20rem;
+      margin-top: -5rem;
+    }
+    .description-card {
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 800px) {
+        justify-content: flex-start;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+        width: 80%;
+      }
+      .content {
+        @media (max-width: 800px) {
+          width: 100%;
+          gap: 2rem;
+        }
+      }
+    }
+    .stack > div {
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 800px) {
+        justify-content: flex-start;
+      }
+    }
+    .links {
+      justify-content: flex-end;
+      @media (max-width: 800px) {
+        justify-content: flex-start;
+      }
+    }
   }
   .description-card {
     height: 20rem;
@@ -21,8 +95,6 @@
     background-color: white;
 
     padding: 3rem;
-    margin-right: -20rem;
-    margin-bottom: -5rem;
 
     .content {
       //border: solid blue;
@@ -31,24 +103,45 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.75rem;
+
+      @media (max-width: 800px) {
+        font-size: clamp(0.9rem, 0.8222rem + 0.3556vw, 1rem);
+      }
 
       .title {
         font-size: 2rem;
         font-weight: 600;
+        @media (max-width: 800px) {
+          font-size: clamp(1.8rem, 1.6444rem + 0.7111vw, 2rem);
+        }
       }
       .stack {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         word-spacing: 1rem;
         font-weight: 500;
+      }
+      .links {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .links > img {
+        height: 1.6rem;
       }
     }
   }
   .image-card {
     img {
       height: 20rem;
+      width: 30rem;
       border-radius: 24px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      @media (max-width: 800px) {
+        height: 0;
+      }
     }
   }
 }
