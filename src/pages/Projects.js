@@ -1,6 +1,7 @@
 import "../assets/scss/projects.scss";
 import noto from "../assets/icons/noto.png";
 import wordle from "../assets/icons/wordle.png";
+import budgeting from "../assets/icons/budgeting.png";
 import github from "../assets/icons/github2.png";
 import link from "../assets/icons/link-icon.png";
 import githubWhite from "../assets/icons/github-white.png";
@@ -11,6 +12,7 @@ import { useState } from "react";
 function Projects() {
   const [card1Hover, setCard1Hover] = useState(false);
   const [card2Hover, setCard2Hover] = useState(false);
+  const [card3Hover, setCard3Hover] = useState(false);
   return (
     <div className="projects">
       <div className="noto project-left">
@@ -75,7 +77,7 @@ function Projects() {
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.35 }}
-                  />{" "}
+                  />
                 </a>
                 <a
                   href="https://noto-notes.vercel.app"
@@ -155,8 +157,9 @@ function Projects() {
             <div className="title">Wordle++</div>
             <p className="desc">
               All the fun of the original game, now with 20% more letters. Built
-              in React and styled with SASS. The game logic fetches its 6 letter
-              word banks from local JSON files.
+              in React and styled with Sass/scss. The game logic fetches its 6
+              letter word banks from local JSON files, and tracks game stats in
+              local storage.
             </p>
             <div className="stack">
               <div> React Sass </div>
@@ -178,6 +181,90 @@ function Projects() {
               </div>
             </div>
           </div>
+        </motion.div>
+      </div>
+      <div className="budgeting project-left">
+        <motion.div
+          className="description-card"
+          initial={{ y: "100vh" }}
+          animate={{ y: 0 }}
+          transition={{ type: "tween", duration: 1.2, delay: 1 }}
+        >
+          <div className="content">
+            <div className="title">Budgeting Mobile</div>
+            <p className="desc">
+              A budgeting android mobile app, written in Java, using Android
+              Studio. Various spending categories are tracked and displayed with
+              graphs to visualize spending habits. Data for the application is
+              stored using a SQLite database.
+            </p>
+            <div className="stack">
+              <div>Java AndroidStudio SQLite </div>
+              <div className="links">
+                <a
+                  href="https://github.com/brandonlam4237/Budgeting-Mobile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={github} alt="github" />
+                </a>
+                <a
+                  href="https://github.com/brandonlam4237/Budgeting-Mobile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={link} alt="external link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className="image-card"
+          initial={{ y: "100vh" }}
+          animate={{ y: 0 }}
+          transition={{ type: "tween", duration: 1.2, delay: 1.2 }}
+          onMouseEnter={() => {
+            setCard3Hover(true);
+          }}
+          onMouseLeave={() => {
+            setCard3Hover(false);
+          }}
+        >
+          {card3Hover && (
+            <div className="hover">
+              <div className="overlay-links">
+                <a
+                  href="https://github.com/brandonlam4237/Budgeting-Mobile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.img
+                    src={githubWhite}
+                    alt="github"
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.35 }}
+                  />
+                </a>
+                <a
+                  href="https://github.com/brandonlam4237/Budgeting-Mobile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.img
+                    src={linkWhite}
+                    alt="external link"
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.35, delay: 0.4 }}
+                  />
+                </a>
+              </div>
+              <div className="overlay"></div>
+            </div>
+          )}
+          <img src={budgeting} alt="budgeting-app" />
         </motion.div>
       </div>
     </div>
