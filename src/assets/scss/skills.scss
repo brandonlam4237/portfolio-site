@@ -129,10 +129,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.3rem;
+    margin-top: clamp(1rem, -1.4rem + 4.8vw, 1.3rem);
 
     @media (min-width: 900px) {
-      margin-top: 2rem;
+      margin-top: clamp(1.3rem, -0.77rem + 3.68vw, 1.875rem);
     }
 
     @media (min-width: 1150px) {
@@ -149,7 +149,7 @@
   }
 
   .skill-badge {
-    font-size: clamp(0.8rem, 0.3333rem + 0.5333vw, 1rem);
+    font-size: clamp(0.65rem, 0.35rem + 0.6vw, 1.1rem);
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -190,7 +190,7 @@
       grid-auto-rows: 4rem;
       gap: 30px;
       .skill-badge {
-        font-size: 0.6rem;
+        font-size: 0.75rem;
       }
     }
   }

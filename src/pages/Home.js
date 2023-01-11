@@ -1,16 +1,15 @@
 import "../assets/scss/home.scss";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+// import icons / images
 import github from "../assets/icons/github.png";
 import linkedin from "../assets/icons/linkedin.png";
 import resume from "../assets/icons/resume.png";
-import pdf from "../assets/icons/pdf.pdf";
 import Skills from "../components/Skills";
-//import face from "../assets/icons/face.png";
 import kirby from "../assets/icons/kirby.jpeg";
 import arrow from "../assets/icons/arrow.png";
-//import stars from "../assets/icons/stars.png";
 import blush from "../assets/icons/blush.png";
-import { useState } from "react";
-import { motion } from "framer-motion";
 
 function Home({ toContact }) {
   const [aboutHover, setAboutHover] = useState(false);
@@ -145,7 +144,7 @@ function Home({ toContact }) {
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.35 }}
-        href="https://www.linkedin.com/in/brandon-lam-b30819165/"
+        href="https://www.linkedin.com/in/brandonlam4237"
         target="_blank"
         rel="noreferrer"
         onMouseEnter={() => {
@@ -172,7 +171,7 @@ function Home({ toContact }) {
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.5 }}
         className="resume"
-        href={pdf}
+        href="https://drive.google.com/file/d/1a9edlTrY9WFZ4K22cPg_hCoyMhZ99B3M/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
         onMouseEnter={() => {

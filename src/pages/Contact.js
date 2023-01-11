@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import EmailForm from "../components/EmailForm";
 
+// import icons / images
 import linkedin from "../assets/icons/linkedin.png";
 import arrow from "../assets/icons/arrow.png";
 import mail from "../assets/icons/mail-icon.png";
 import phone from "../assets/icons/phone-icon.png";
 import location from "../assets/icons/location-icon.png";
-import kirby from "../assets/icons/kirbyFloat.png";
+import kirby from "../assets/images/kirbyFloat.png";
 
 function Contact({ toastShow }) {
   const [linkedinHover, setLinkedinHover] = useState(false);
@@ -94,14 +95,14 @@ function Contact({ toastShow }) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.35, delay: 0.4 }}
             >
-              727
+              283
             </motion.div>
             <motion.div
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.35, delay: 0.8 }}
             >
-              353
+              0925
             </motion.div>
           </div>
         )}
@@ -129,7 +130,7 @@ function Contact({ toastShow }) {
         initial={{ y: "80vh" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 1.2, delay: 0.45 }}
-        href="https://www.linkedin.com/in/brandon-lam-b30819165/"
+        href="https://www.linkedin.com/in/brandonlam4237"
         target="_blank"
         rel="noreferrer"
         onMouseEnter={() => {

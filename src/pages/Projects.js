@@ -1,13 +1,15 @@
 import "../assets/scss/projects.scss";
-import noto from "../assets/icons/noto.png";
-import wordle from "../assets/icons/wordle.png";
-import budgeting from "../assets/icons/budgeting.png";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+// import icons / images
+import noto from "../assets/images/noto.png";
+import wordle from "../assets/images/wordle.png";
+import budgeting from "../assets/images/budgeting.png";
 import github from "../assets/icons/github2.png";
 import link from "../assets/icons/link-icon.png";
 import githubWhite from "../assets/icons/github-white.png";
 import linkWhite from "../assets/icons/link-white.png";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
 function Projects() {
   const [card1Hover, setCard1Hover] = useState(false);
@@ -26,9 +28,9 @@ function Projects() {
             <div className="title">Noto</div>
             <p className="desc">
               A minimalistic note taking app. Noto is a full-stack CRUD
-              application built using React for the front-end, and
-              express/node.js back-end. User notes, and credentials are stored
-              using MongoDB.
+              application built using React for the front-end, and an
+              express/node.js back-end REST API. User notes, and credentials are
+              stored using MongoDB.
             </p>
             <div className="stack">
               <div>MongoDB Express React Node.js </div>
@@ -157,9 +159,8 @@ function Projects() {
             <div className="title">Wordle++</div>
             <p className="desc">
               All the fun of the original game, now with 20% more letters. Built
-              in React and styled with Sass/scss. The game logic fetches its 6
-              letter word banks from local JSON files, and tracks game stats in
-              local storage.
+              in React and styled with Sass/scss. Featuring visual settings,
+              hard mode, and game stats tracked in local storage.
             </p>
             <div className="stack">
               <div> React Sass </div>
