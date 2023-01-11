@@ -71,9 +71,11 @@
       height: clamp(5rem, 0.1844rem + 9.6192vw, 8rem);
       font-size: clamp(0.8rem, 0.479rem + 0.6413vw, 1rem);
     }
+    @media (min-width: 1300px) {
+      height: clamp(8rem, -7.6rem + 19.2vw, 14rem);
+    }
     @media (min-width: 1400px) {
       width: clamp(20rem, 10.6667rem + 10.6667vw, 24rem);
-      height: clamp(8rem, -10.6667rem + 21.3333vw, 16rem);
       font-size: clamp(1rem, 0.7667rem + 0.2667vw, 1.1rem);
     }
   }

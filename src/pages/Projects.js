@@ -159,8 +159,8 @@ function Projects() {
             <div className="title">Wordle++</div>
             <p className="desc">
               All the fun of the original game, now with 20% more letters. Built
-              in React and styled with Sass/scss. Featuring visual settings,
-              hard mode, and game stats tracked in local storage.
+              in React and styled with Sass. Featuring visual settings, hard
+              mode, and game stats tracked in local storage.
             </p>
             <div className="stack">
               <div> React Sass </div>

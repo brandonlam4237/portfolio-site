@@ -71,7 +71,7 @@ function Home({ toContact }) {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.35, delay: 1.2 }}
                 >
-                  and performative applications.
+                  and responsive web applications.
                 </motion.div>
               </div>
               <motion.button

@@ -4,6 +4,10 @@
   grid-auto-rows: 14vw;
   width: 75vw;
   gap: 15px;
+  @media (min-width: 1800px) {
+    width: 84.375rem;
+    grid-auto-rows: 15.75rem;
+  }
   @media (min-width: 801px) {
     gap: clamp(0.625rem, 0.0405rem + 1.1676vw, 1.5rem);
   }
@@ -88,7 +92,7 @@
       padding: clamp(0.9375rem, 0.4359rem + 1.002vw, 1.25rem);
     }
     @media (min-width: 1400px) {
-      padding: clamp(1.25rem, -2.8333rem + 4.6667vw, 3rem);
+      padding: clamp(1.25rem, -3.125rem + 5vw, 2.5rem);
     }
   }
   .linkedin {

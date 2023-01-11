@@ -50,7 +50,7 @@
     }
 
     @media (min-width: 1400px) {
-      width: clamp(5.2rem, -1.3333rem + 7.4667vw, 8rem);
+      width: clamp(5.2rem, -1.1rem + 7.2vw, 7rem);
       height: clamp(1.4rem, -0rem + 1.6vw, 2rem);
       font-size: clamp(0.75rem, 0.1667rem + 0.6667vw, 1rem);
     }
@@ -76,7 +76,7 @@
       height: clamp(1.1rem, 0.6988rem + 0.8013vw, 1.4rem);
     }
     @media (min-width: 1400px) {
-      width: clamp(5.2rem, -1.3333rem + 7.4667vw, 8rem);
+      width: clamp(5.2rem, -1.1rem + 7.2vw, 7rem);
       height: clamp(1.4rem, -0rem + 1.6vw, 2rem);
     }
   }
@@ -136,7 +136,7 @@
     }
 
     @media (min-width: 1150px) {
-      margin-top: clamp(1.875rem, -2.5rem + 5vw, 3.75rem);
+      margin-top: clamp(1.875rem, -0.1154rem + 2.7692vw, 3rem);
     }
   }
 
@@ -146,6 +146,10 @@
     grid-auto-rows: 8vw;
     gap: 20px;
     width: 20vw;
+    @media (min-width: 2000px) {
+      max-width: 25rem;
+      grid-auto-rows: 10rem;
+    }
   }
 
   .skill-badge {
