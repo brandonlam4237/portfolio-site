@@ -18,6 +18,14 @@
     gap: clamp(5rem, -0.5714rem + 6.8571vw, 8rem);
   }
 
+  .typ {
+    margin-top: 5rem;
+
+    @media (max-width: 800px) {
+      margin-top: 0rem;
+    }
+  }
+
   .project-left {
     margin-bottom: 5rem;
     display: flex;
