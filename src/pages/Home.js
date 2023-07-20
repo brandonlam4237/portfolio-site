@@ -57,7 +57,7 @@ function Home({ toContact }) {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.35, delay: 0.4 }}
                 >
-                  I'm a front-end web developer
+                  I'm a full-stack web developer
                 </motion.div>
                 <motion.div
                   initial={{ y: 10, opacity: 0 }}

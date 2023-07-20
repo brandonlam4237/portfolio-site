@@ -19,8 +19,8 @@ import node from "../assets/icons/node-icon.png";
 import sql from "../assets/icons/sql-icon.png";
 
 import git from "../assets/icons/git-icon.png";
-import ae from "../assets/icons/ae-icon.png";
-import ai from "../assets/icons/ai-icon.png";
+import figma from "../assets/icons/figma-icon.png";
+import shopify from "../assets/icons/shopify-icon.png";
 import ps from "../assets/icons/ps-icon.png";
 
 function Skills() {
@@ -223,28 +223,28 @@ function Skills() {
               <motion.img
                 whileHover={{ y: -6 }}
                 className="icon"
+                src={shopify}
+                alt="Shopify"
+              />
+              <div>Shopify</div>
+            </div>
+            <div className="skill-badge">
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
+                src={figma}
+                alt="figma"
+              />
+              <div>Figma</div>
+            </div>
+            <div className="skill-badge">
+              <motion.img
+                whileHover={{ y: -6 }}
+                className="icon"
                 src={ps}
-                alt="photoshop"
+                alt="Photoshop"
               />
               <div>Photoshop</div>
-            </div>
-            <div className="skill-badge">
-              <motion.img
-                whileHover={{ y: -6 }}
-                className="icon"
-                src={ae}
-                alt="after effects"
-              />
-              <div>After Effects</div>
-            </div>
-            <div className="skill-badge">
-              <motion.img
-                whileHover={{ y: -6 }}
-                className="icon"
-                src={ai}
-                alt="illustrator"
-              />
-              <div>Illustrator</div>
             </div>
           </div>
         )}
